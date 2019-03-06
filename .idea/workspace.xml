@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78845956-8418-4af1-a0dd-79f58633865d" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Dao/Connector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/Dao/CrudAssignmentsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Dao/CrudAssignmentsDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/Dao/CrudAssignmentsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Dao/CrudAssignmentsDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CcMS" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CcMS" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Dao/DatabaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/Dao/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Dao/StudentDaoImpl.java" afterDir="false" />
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,7 +23,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/MentorDaoImpl.java">
@@ -61,6 +82,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
               <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="88" selection-end-column="5" />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/StudentDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,6 +98,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/Connector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -91,13 +121,34 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Model/Mentor.java">
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/DatabaseConnector.java">
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="290">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -121,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/Dao/allAsignmentsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/Dao/CrudAssignmentDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/Dao/studentsAssingmentsDao.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/Dao/CrudAssignmentsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/Dao/CrudAssignmentsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/Dao/Connector.java" />
@@ -128,6 +180,15 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/Dao/MentorDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/Dao/StudentDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/Dao/DatabaseConnector.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="823" />
@@ -140,8 +201,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="Scope" />
+=======
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,11 +216,14 @@
             <path>
               <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="b2602c69:ProjectViewProjectNode" />
               <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="b2602c69:ProjectViewProjectNode" />
               <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -184,6 +251,18 @@
               <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="b2602c69:ProjectViewProjectNode" />
               <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codecool" type="462c0819:PsiDirectoryNode" />
+              <item name="Dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codecool" type="462c0819:PsiDirectoryNode" />
@@ -194,9 +273,7 @@
               <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="codecool" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ccms-ccms-tatiana-rafal-wojtek-pawel" type="b2602c69:ProjectViewProjectNode" />
@@ -209,6 +286,11 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,6 +332,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="4246000" />
   </component>
   <component name="ToolWindowManager">
@@ -262,6 +345,20 @@
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
+=======
+    <option name="totallyTimeSpent" value="3359000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -271,10 +368,17 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+=======
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -283,7 +387,11 @@
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+<<<<<<< HEAD
       <window_info anchor="right" id="Database" order="8" />
+=======
+      <window_info anchor="right" id="Database" order="8" weight="0.32967034" />
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,10 +496,17 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/CrudAssignmentsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
         </state>
       </provider>
     </entry>
@@ -430,6 +545,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/StudentDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -444,6 +560,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 898bec1b964f4355f23ac7c2e88fa02dd9d6e588
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/EmployeeDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -548,6 +666,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/MentorDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/StudentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Dao/DatabaseConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -8,22 +8,14 @@ import java.sql.SQLException;
 
 public class CrudAssignmentsDaoImpl implements  CrudAssignmentsDao {
 
-    private Connection connection;
+    private DatabaseConnector connection;
 
     public CrudAssignmentsDaoImpl() {
-
+        this.connection = DatabaseConnector.getInstance();
     }
 
     @Override
     public void addAssignment(String title) {
-        connection.
+        connection.connectToDatabase();
     }
-
-    private Connection initializeConnection() {
-        final String DATABASEPATH = "src/main/resources/CcMS";
-        Connector connector = new Connector(DATABASEPATH);
-        return connector.getDatabaseConnection();
-    }
-
-
 }
