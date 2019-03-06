@@ -22,12 +22,11 @@ public class DatabaseConnector {
     }
 
 
-
     private void connectToDatabase() {
         connection = null;
         try {
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:CcMS.db");
+            c = DriverManager.getConnection("jdbc:sqlite:src/main/resources/CcMS.db");
         } catch (ClassNotFoundException e) {
 //            System.err.println(e.getClass().getName() + ": " + e.getMessage());
 //            System.exit(0);
