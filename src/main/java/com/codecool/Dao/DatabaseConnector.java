@@ -3,13 +3,14 @@ package com.codecool.Dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DatabaseConnector {
 
     protected static DatabaseConnector single_instance = null;
-    Connection c;
+    private Connection connection;
 
-    private DatabaseConnector(){
+    protected DatabaseConnector(){
 
     }
 
@@ -22,18 +23,21 @@ public class DatabaseConnector {
 
 
 
-    void connectToDatabase() {
-        c = null;
+    private void connectToDatabase() {
+        connection = null;
         try {
             Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:CcMS.db");
-        } catch (Exception e) {
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            System.exit(0);
+            connection = DriverManager.getConnection("jdbc:sqlite:CcMS.db");
+        } catch (ClassNotFoundException e) {
+//            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+//            System.exit(0);
+            e.getStackTrace();
+        } catch (SQLException e) {
+            e.getStackTrace();
         }
     }
 
     public Connection getConnection(){
-        return c;
+        return connection;
     }
 }
