@@ -1,14 +1,14 @@
 package com.codecool.Dao;
 
-import com.codecool.Model.User;
+import com.codecool.Model.Employee;
 
 import java.util.List;
 
 public class MentorDaoImpl implements UserDao{
 
-    public List<User> mentors;
+    public List<Employee> mentors;
 
-    public List<User> getAll() {
+    public List<Employee> getAll() {
         return mentors;
     }
 
