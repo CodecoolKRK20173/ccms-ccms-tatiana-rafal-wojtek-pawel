@@ -1,9 +1,7 @@
 package com.codecool.Dao;
 
-<<<<<<< HEAD
-=======
+
 import com.codecool.Model.Employee;
->>>>>>> 1ad2c2604cc15c3622b05fe428b6aa640257c9a9
 
 import java.sql.*;
 import java.util.ArrayList;
