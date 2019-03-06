@@ -22,7 +22,7 @@ public class DatabaseConnector {
     }
 
 
-    private void connectToDatabase() {
+    public void connectToDatabase() {
         connection = null;
         try {
             Class.forName("org.sqlite.JDBC");
