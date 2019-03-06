@@ -1,12 +1,14 @@
 package com.codecool;
 
 
-import com.codecool.Dao.CrudAssignmentsDaoImpl;
+import com.codecool.Controller.MainController;
+
+
 
 public class Main {
-    public static void main(String[] args) {
 
-        CrudAssignmentsDaoImpl dao = new CrudAssignmentsDaoImpl();
-        dao.addAssignment("halo");
+    public static void main(String[] args) {
+        MainController mainController = new MainController();
+        mainController.handleLoginController();
     }
 }

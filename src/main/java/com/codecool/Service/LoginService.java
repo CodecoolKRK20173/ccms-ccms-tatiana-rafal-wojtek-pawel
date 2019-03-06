@@ -1,4 +1,54 @@
 package com.codecool.Service;
 
+import com.codecool.Controller.AdminController;
+import com.codecool.Controller.EmployeeController;
+import com.codecool.Controller.MentorController;
+import com.codecool.Controller.StudentController;
+import com.codecool.Dao.LoginDaoImpl;
+import com.codecool.Model.Employee;
+import com.codecool.View.View;
+
 public class LoginService {
+
+    private View view;
+    private LoginDaoImpl loginDao;
+    private boolean isLogining;
+    private Employee user;
+    private String mentor = "mentor";
+    private String employee = "employee";
+    private String admin = "admin";
+    private String student = "student";
+    private MentorController mentorController;
+    private StudentController studentController;
+    private AdminController adminController;
+    private EmployeeController employeeController;
+
+    public LoginService() {
+        view = new View();
+        loginDao = new LoginDaoImpl();
+        isLogining = true;
+    }
+
+    public Employee login() {
+        return loginDao.getUserByLogin(view.getLogin(), view.getPassword());
+    }
+
+
+    public void chooseController() {
+        view.clearScreen();
+        user = login();
+        if(user.getAccessRights() == mentor) {
+            mentorController = new MentorController();
+            mentorController.handleMentorController();
+        } else if (user.getAccessRights() == student) {
+            studentController = new StudentController();
+            //to do
+        } else if(user.getAccessRights() == admin) {
+            adminController = new AdminController();
+            //to do
+        } else if (user.getAccessRights() == employee) {
+            employeeController = new EmployeeController();
+            //to do
+        }
+    }
 }
