@@ -1,13 +1,10 @@
 package com.codecool.Dao;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.sql.SQLException;
 
 public class CrudAssignmentsDaoImpl implements  CrudAssignmentsDao {
-    
+
     private DatabaseConnector connector;
 
     public CrudAssignmentsDaoImpl() {
@@ -20,7 +17,7 @@ public class CrudAssignmentsDaoImpl implements  CrudAssignmentsDao {
         PreparedStatement assignment = null;
         String addString = "INSERT INTO Assignments (Title) VALUES (?)";
         try {
-            connector.getConnection().prepareStatement(addString);
+            assignment = connector.getConnection().prepareStatement(addString);
             assignment.setString(1, title);
             assignment.executeUpdate();
             assignment.close();
@@ -30,5 +27,19 @@ public class CrudAssignmentsDaoImpl implements  CrudAssignmentsDao {
         }
     }
 
-    
+    @Override
+    public void deleteAssignment(int id) {
+        connector.connectToDatabase();
+        PreparedStatement assignment = null;
+        String deleteString = "DELETE FROM Assignments WHERE ID = ?";
+        try {
+            assignment = connector.getConnection().prepareStatement(deleteString);
+            assignment.setInt(1, id);
+            assignment.executeUpdate();
+            assignment.close();
+            connector.getConnection().close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
