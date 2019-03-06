@@ -1,6 +1,5 @@
 package com.codecool.Dao;
 
-import com.codecool.Model.User;
 
 import java.sql.Statement;
 import java.util.List;
