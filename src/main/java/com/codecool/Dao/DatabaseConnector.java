@@ -22,14 +22,18 @@ public class DatabaseConnector {
     }
 
 
+
     public void connectToDatabase() {
         connection = null;
         try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:src/main/resources/CcMS.dms");
-        } catch (Exception e) {
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            System.exit(0);
+        } catch (ClassNotFoundException e) {
+//            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+//            System.exit(0);
+            e.getStackTrace();
+        } catch (SQLException e) {
+            e.getStackTrace();
         }
     }
 
