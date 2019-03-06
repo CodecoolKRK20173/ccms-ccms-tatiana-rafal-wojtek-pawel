@@ -20,13 +20,11 @@ public class DatabaseConnector {
         return single_instance;
     }
 
-
-
     void connectToDatabase() {
         c = null;
         try {
             Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:CcMS.db");
+            c = DriverManager.getConnection("jdbc:sqlite:src/main/resources/CcMS.db");
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
