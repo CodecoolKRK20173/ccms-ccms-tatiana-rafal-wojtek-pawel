@@ -12,11 +12,11 @@ public class LoginDaoImpl{
         this.connector = DatabaseConnector.getInstance();
     }
 
-    private String getAccessRights(String userLogin, String userPassword) {
+    private String getAccessRights(String userLogin, String userPassword) throws SQLException {
         connector.connectToDatabase();
         Statement statement;
         ResultSet resultSet;
-        try {
+
             connector.connectToDatabase();
             connector.getConnection().setAutoCommit(false);
             statement = connector.getConnection().createStatement();
@@ -28,13 +28,9 @@ public class LoginDaoImpl{
             statement.close();
             connector.getConnection().close();
             return accessRights;
-        } catch (SQLException error) {
-            error.printStackTrace();
-        }
-        return null;
     }
 
-    private String getNameOfTable(String userLogin, String userPassword) {
+    private String getNameOfTable(String userLogin, String userPassword) throws SQLException{
         String userAccessRigths = getAccessRights(userLogin, userPassword);
         String table = "";
         if (userAccessRigths.equals("mentor")) {
@@ -49,7 +45,7 @@ public class LoginDaoImpl{
         return table;
     }
 
-    public Employee getUserByLogin(String userLogin, String userPassword) {
+    public Employee getUserByLogin(String userLogin, String userPassword) throws SQLException {
         String table = getNameOfTable(userLogin, userPassword);
         connector.connectToDatabase();
         PreparedStatement getUser;
@@ -58,7 +54,7 @@ public class LoginDaoImpl{
                 table +" LEFT JOIN Logins ON Logins.Id = "+ table +".LoginId WHERE Logins.Login = ?" +
                 " AND Logins.Password = ?";
 
-        try {
+
             getUser = connector.getConnection().prepareStatement(user);
             getUser.setString(1,userLogin);
             getUser.setString(2,userPassword);
@@ -72,10 +68,6 @@ public class LoginDaoImpl{
             getUser.close();
             connector.getConnection().close();
             return new Employee(id, firstName, secondName, mail, accessRights);
-        } catch (SQLException error) {
-            error.printStackTrace();
-        }
-        return null;
     }
 
 }

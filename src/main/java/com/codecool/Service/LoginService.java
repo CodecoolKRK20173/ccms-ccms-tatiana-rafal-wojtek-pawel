@@ -8,6 +8,8 @@ import com.codecool.Dao.LoginDaoImpl;
 import com.codecool.Model.Employee;
 import com.codecool.View.View;
 
+import java.sql.SQLException;
+
 public class LoginService {
 
     private View view;
@@ -29,26 +31,36 @@ public class LoginService {
         isLogining = true;
     }
 
-    public Employee login() {
-        return loginDao.getUserByLogin(view.getLogin(), view.getPassword());
+    public Employee login() throws SQLException {
+
+            Employee employee = loginDao.getUserByLogin(view.getLogin(), view.getPassword());
+            return employee;
+
     }
 
 
     public void chooseController() {
-        view.clearScreen();
-        user = login();
-        if(user.getAccessRights().equals(mentor)) {
-            mentorController = new MentorController();
-            mentorController.handleMentorController();
-        } else if (user.getAccessRights().equals(student)) {
-            studentController = new StudentController();
-            //to do
-        } else if(user.getAccessRights().equals(admin)) {
-            adminController = new AdminController();
-            //to do
-        } else if (user.getAccessRights().equals(employee)) {
-            employeeController = new EmployeeController();
-            //to do
+        try {
+            view.clearScreen();
+            user = login();
+            if (user.getAccessRights().equals(mentor)) {
+                mentorController = new MentorController();
+                mentorController.handleMentorController();
+            } else if (user.getAccessRights().equals(student)) {
+                studentController = new StudentController();
+                //to do
+            } else if (user.getAccessRights().equals(admin)) {
+                adminController = new AdminController();
+                //to do
+            } else if (user.getAccessRights().equals(employee)) {
+                employeeController = new EmployeeController();
+                //to do
+            }
         }
+        catch (SQLException e){
+            System.out.println("There is no such account !");
+            view.getEmptyInput();
+        }
+
     }
 }
