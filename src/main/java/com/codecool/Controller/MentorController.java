@@ -29,6 +29,7 @@ public class MentorController {
             case 1:
                 break;
             case 2:
+                mentorService.addNewAssignment();
                 break;
             case 3:
                 break;
