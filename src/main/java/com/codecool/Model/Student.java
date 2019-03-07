@@ -11,6 +11,13 @@ public class Student extends Employee{
         this.grades = grades;
     }
 
+
+    public Student(int id, String name, String surname, String email, String accesRights){
+        super(id, name, surname, email, accesRights);
+    }
+
+
+
     public HashMap<Assignment, Integer> getGrades() {
         return grades;
     }
@@ -18,4 +25,6 @@ public class Student extends Employee{
     public void setGrades(HashMap<Assignment, Integer> grades) {
         this.grades = grades;
     }
+
+
 }

@@ -44,5 +44,6 @@ public class MentorService {
     public void displayAllStudents() {
         List<Employee> students = studentDao.getAll();
         view.displayStudentsTable(students);
+        view.getEmptyInput();
     }
 }

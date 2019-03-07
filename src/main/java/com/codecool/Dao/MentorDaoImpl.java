@@ -34,7 +34,7 @@ public class MentorDaoImpl implements UserDao{
         }
     }
 
-    public void add(String name, String surname, String mail, String loginID) {
+    public void add(String name, String surname, String mail, String login, String password) {
     }
 
     public void edit(int id) {

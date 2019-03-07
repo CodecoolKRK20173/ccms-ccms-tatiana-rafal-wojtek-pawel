@@ -77,6 +77,7 @@ public class View {
             table.addRow(String.valueOf(student.getID()),
                                         student.getName(),
                                         student.getSurname(),
+                                        student.getEmail(),
                                         assignmentsToString((Student) student));
         }
         table.print();
@@ -85,7 +86,12 @@ public class View {
     public String assignmentsToString(Student student) {
         StringBuilder sb = new StringBuilder();
         HashMap<Assignment, Integer> grades = student.getGrades();
-        grades.forEach((key, value) -> sb.append(key + ": " + value));
+        grades.forEach((key, value) -> sb.append(key.getTitle() + ": " + value + ", "));
         return sb.toString();
+    }
+
+    public void getEmptyInput() {
+        displayMessage("Press enter to continue ");
+        String input = scanner.nextLine();
     }
 }
