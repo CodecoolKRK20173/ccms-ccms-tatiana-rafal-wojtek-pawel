@@ -27,6 +27,7 @@ public class MentorController {
         view.clearScreen();
         switch (userInput) {
             case 1: // list all students
+                mentorService.displayAllStudents();
                 break;
             case 2: // add new assignment
                 mentorService.addNewAssignment();

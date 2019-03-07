@@ -1,7 +1,10 @@
 package com.codecool.View;
 
+import com.codecool.Model.Assignment;
+import com.codecool.Model.Employee;
 import com.codecool.Model.Student;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -66,12 +69,23 @@ public class View {
         System.out.flush();
     }
 
-    public void displayStudentsTable(List<Student> students) {
+    public void displayStudentsTable(List<Employee> students) {
         TableView table = new TableView();
         table.setShowVerticalLines(true);
-        table.setHeaders("ID", "Name", "Surname", "Email", "Assignment/grade");
-        for (Student student: students) {
-
+        table.setHeaders("ID", "Name", "Surname", "Email", "Assignment/Grade");
+        for (Employee student: students) {
+            table.addRow(String.valueOf(student.getID()),
+                                        student.getName(),
+                                        student.getSurname(),
+                                        assignmentsToString((Student) student));
         }
+        table.print();
+    }
+
+    public String assignmentsToString(Student student) {
+        StringBuilder sb = new StringBuilder();
+        HashMap<Assignment, Integer> grades = student.getGrades();
+        grades.forEach((key, value) -> sb.append(key + ": " + value));
+        return sb.toString();
     }
 }
