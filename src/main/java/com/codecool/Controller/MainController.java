@@ -26,6 +26,7 @@ public class MainController {
             switch (userInput) {
                 case 1:
                     loginService.chooseController();
+                    view.clearScreen();
                     break;
                 case 2:
                     isRunning = false;

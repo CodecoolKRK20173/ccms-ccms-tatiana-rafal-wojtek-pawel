@@ -4,8 +4,6 @@ package com.codecool.Dao;
 import com.codecool.Model.Assignment;
 import com.codecool.Model.Employee;
 import com.codecool.Model.Student;
-
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -154,7 +152,7 @@ public class StudentDaoImpl implements UserDao {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            return Integer.parseInt(null);
+            return 0;
     }}
 
     @Override
