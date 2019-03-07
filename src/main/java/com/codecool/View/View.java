@@ -19,26 +19,25 @@ public class View {
 
     public Integer getIntegerInput() {
         while(!scanner.hasNextInt()) {
-            showMessage(getWrongInput);
+            displayMessage(getWrongInput);
             scanner.nextLine();
         }
         int number = scanner.nextInt();
-        scanner.nextLine();
         return number;
     }
 
     public String getLogin() {
-        showMessage(getLogin);
+        displayMessage(getLogin);
         return getStringInput();
     }
 
     public String getPassword() {
-        showMessage(getPassword);
+        displayMessage(getPassword);
         return getStringInput();
     }
 
     public void displayMentorMenu() {
-        showMessage("Certification Candidate Management System:" +
+        displayMessage("Certification Candidate Management System:" +
                     "\n (1) List students" +
                     "\n (2) Add an assignment" +
                     "\n (3) Grade an assignment submitted by students" +
@@ -50,13 +49,12 @@ public class View {
     }
 
     public void displayMainMenu() {
-        showMessage("What would you like to do:" +
+        displayMessage("What would you like to do:" +
                     "\n 1. Log in" +
-                    "\n 2. Create new user" +
-                    "\n 3. Exit.");
+                    "\n 2. Exit");
     }
 
-    public void showMessage(String message) {
+    public void displayMessage(String message) {
         System.out.println(message);
     }
 

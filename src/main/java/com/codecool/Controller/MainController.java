@@ -33,7 +33,7 @@ public class MainController {
                     isRunning = false;
                     break;
                 default:
-                    view.showMessage(view.getWrongInput);
+                    view.displayMessage(view.getWrongInput);
                     break;
             }
         }
