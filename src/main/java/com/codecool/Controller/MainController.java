@@ -1,6 +1,7 @@
 package com.codecool.Controller;
 
 
+
 import com.codecool.Service.LoginService;
 import com.codecool.View.View;
 
@@ -27,16 +28,12 @@ public class MainController {
                     loginService.chooseController();
                     break;
                 case 2:
-                    break;
-                case 3:
                     isRunning = false;
                     break;
                 default:
-                    view.showMessage(view.getWrongInput);
+                    view.displayMessage(view.getWrongInput);
                     break;
             }
         }
     }
-
-
 }
