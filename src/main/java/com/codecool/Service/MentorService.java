@@ -23,6 +23,12 @@ public class MentorService {
         assignmentsDao.addAssignment(title);
     }
 
+    public void removeAssignment() {
+        view.displayMessage("Enter assignment's ID you want to remove");
+        int id = view.getIntegerInput();
+        assignmentsDao.deleteAssignment(id);
+    }
+
     public void removeStudent() {
         view.displayMessage("Enter student's ID you want to remove");
         int id = view.getIntegerInput();
