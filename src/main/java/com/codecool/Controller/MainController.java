@@ -28,8 +28,6 @@ public class MainController {
                     loginService.chooseController();
                     break;
                 case 2:
-                    break;
-                case 3:
                     isRunning = false;
                     break;
                 default:
