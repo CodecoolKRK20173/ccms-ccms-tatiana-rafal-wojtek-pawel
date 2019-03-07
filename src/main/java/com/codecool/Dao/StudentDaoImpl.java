@@ -117,7 +117,7 @@ public class StudentDaoImpl implements UserDao {
 
 
     private void createLogin(String login, String password){
-        String query = "INSERT INTO LOGINS(LOGIN, PASSWORD, ACCESSRIGHTS) VALUES(?,?,student)";
+        String query = "INSERT INTO LOGINS(LOGIN, PASSWORD, ACCESSRIGHTS) VALUES(?,?,'student')";
 
         String query2 = "INSERT INTO LOGINS(LOGIN, PASSWORD, ACCESSRIGHTS) VALUES(?,?,student)";
         PreparedStatement statement = null;

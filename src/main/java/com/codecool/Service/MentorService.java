@@ -46,4 +46,8 @@ public class MentorService {
         view.displayStudentsTable(students);
         view.getEmptyInput();
     }
+
+    public void addStudent() {
+        studentDao.add("halo", "xd", "wp", "wea", "asd");
+    }
 }

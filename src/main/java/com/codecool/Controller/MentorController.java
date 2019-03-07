@@ -37,11 +37,13 @@ public class MentorController {
             case 4: // check attendance
                 break;
             case 5: // add new student
+                mentorService.addStudent();
                 break;
             case 6: // remove a student
                 mentorService.removeStudent();
                 break;
-            case 7: // edit student data
+            case 7: // delete an assignment
+                mentorService.removeAssignment();
                 break;
             case 8: // exit
                 isRunning = false;

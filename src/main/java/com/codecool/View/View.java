@@ -50,7 +50,7 @@ public class View {
                     "\n (4) Check an attendance of students" +
                     "\n (5) Add a student to a class" +
                     "\n (6) Remove a student from a class" +
-                    "\n (7) Edit student's data" +
+                    "\n (7) Remove an assignment" +
                     "\n (8) Exit");
     }
 
