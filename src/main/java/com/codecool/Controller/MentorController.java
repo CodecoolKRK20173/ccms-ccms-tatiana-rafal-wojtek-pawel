@@ -26,22 +26,23 @@ public class MentorController {
         int userInput = view.getIntegerInput();
         view.clearScreen();
         switch (userInput) {
-            case 1:
+            case 1: // list all students
                 break;
-            case 2:
+            case 2: // add new assignment
                 mentorService.addNewAssignment();
                 break;
-            case 3:
+            case 3: // grade an assignment
                 break;
-            case 4:
+            case 4: // check attendance
                 break;
-            case 5:
+            case 5: // add new student
                 break;
-            case 6:
+            case 6: // remove a student
+                mentorService.removeStudent();
                 break;
-            case 7:
+            case 7: // edit student data
                 break;
-            case 8:
+            case 8: // exit
                 isRunning = false;
                 break;
             default:
