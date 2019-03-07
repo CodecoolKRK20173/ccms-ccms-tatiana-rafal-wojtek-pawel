@@ -1,5 +1,8 @@
 package com.codecool.View;
 
+import com.codecool.Model.Student;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class View {
@@ -61,5 +64,14 @@ public class View {
     public void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
+    }
+
+    public void displayStudentsTable(List<Student> students) {
+        TableView table = new TableView();
+        table.setShowVerticalLines(true);
+        table.setHeaders("ID", "Name", "Surname", "Email", "Assignment/grade");
+        for (Student student: students) {
+
+        }
     }
 }
