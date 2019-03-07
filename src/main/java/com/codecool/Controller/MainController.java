@@ -9,7 +9,7 @@ public class MainController {
     private LoginService loginService;
     private boolean isRunning;
     private View view;
-    int userInput;
+    private int userInput;
 
 
     public MainController() {

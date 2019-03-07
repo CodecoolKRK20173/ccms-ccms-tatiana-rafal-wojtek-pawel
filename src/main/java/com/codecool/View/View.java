@@ -36,8 +36,18 @@ public class View {
         return getStringInput();
     }
 
+    public void displayStudentMenu() {
+        displayMessage(
+                "\n Welcome Student!" +
+                "\n What would you like to do:" +
+                "\n (1) View my grades" +
+                "\n (2) Submit assignment" +
+                "\n (3) Exit");
+    }
+
     public void displayMentorMenu() {
-        displayMessage("Certification Candidate Management System:" +
+        displayMessage("\n Welcome Mentor!" +
+                    "\n What would you like to do:" +
                     "\n (1) List students" +
                     "\n (2) Add an assignment" +
                     "\n (3) Grade an assignment submitted by students" +
@@ -49,9 +59,9 @@ public class View {
     }
 
     public void displayMainMenu() {
-        displayMessage("What would you like to do:" +
+        displayMessage("Certification Candidate Management System:" +
                     "\n 1. Log in" +
-                    "\n 2. Exit");
+                    "\n 2. Exit CcMS");
     }
 
     public void displayMessage(String message) {

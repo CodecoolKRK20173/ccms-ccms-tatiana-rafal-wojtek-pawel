@@ -37,16 +37,16 @@ public class LoginService {
     public void chooseController() {
         view.clearScreen();
         user = login();
-        if(user.getAccessRights() == mentor) {
+        if(user.getAccessRights().equals(mentor)) {
             mentorController = new MentorController();
             mentorController.handleMentorController();
-        } else if (user.getAccessRights() == student) {
+        } else if (user.getAccessRights().equals(student)) {
             studentController = new StudentController();
             //to do
-        } else if(user.getAccessRights() == admin) {
+        } else if(user.getAccessRights().equals(admin)) {
             adminController = new AdminController();
             //to do
-        } else if (user.getAccessRights() == employee) {
+        } else if (user.getAccessRights().equals(employee)) {
             employeeController = new EmployeeController();
             //to do
         }
