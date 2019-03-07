@@ -14,7 +14,7 @@ target/
 *.pdf
 *.iml
 *.DS_Store
+*.xml
 
 *.vscode/
 *.idea/
-*.xml
