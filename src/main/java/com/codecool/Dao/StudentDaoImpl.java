@@ -155,7 +155,8 @@ public class StudentDaoImpl implements UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
             return Integer.parseInt(null);
-    }}
+        }
+    }
 
     @Override
     public void edit(int id){
