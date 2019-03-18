@@ -9,7 +9,7 @@ public class MainController {
     private LoginService loginService;
     private boolean isRunning;
     private View view;
-    int userInput;
+    private int userInput;
 
 
     public MainController() {
@@ -26,6 +26,7 @@ public class MainController {
             switch (userInput) {
                 case 1:
                     loginService.chooseController();
+                    view.clearScreen();
                     break;
                 case 2:
                     isRunning = false;
