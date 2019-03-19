@@ -1,5 +1,7 @@
 package com.codecool.Controller;
 
+import com.codecool.Model.Employee;
+import com.codecool.Model.Student;
 import com.codecool.Service.StudentService;
 import com.codecool.View.View;
 
@@ -8,11 +10,13 @@ public class StudentController {
     private View view;
     private boolean isRunning;
     private StudentService studentService;
+    private Employee student;
 
-    public StudentController() {
+    public StudentController(Employee student) {
         view = new View();
         isRunning = true;
-        studentService = new StudentService();
+        studentService = new StudentService(student);
+        this.student = student;
     }
 
     public void handleStudentController() {

@@ -6,6 +6,7 @@ import com.codecool.Controller.MentorController;
 import com.codecool.Controller.StudentController;
 import com.codecool.Dao.LoginDaoImpl;
 import com.codecool.Model.Employee;
+import com.codecool.Model.Student;
 import com.codecool.View.View;
 
 import java.sql.SQLException;
@@ -47,8 +48,8 @@ public class LoginService {
                 mentorController = new MentorController();
                 mentorController.handleMentorController();
             } else if (user.getAccessRights().equals(student)) {
-                studentController = new StudentController();
-                //to do
+                studentController = new StudentController(user);
+                studentController.handleStudentController();
             } else if (user.getAccessRights().equals(admin)) {
                 adminController = new AdminController();
                 //to do

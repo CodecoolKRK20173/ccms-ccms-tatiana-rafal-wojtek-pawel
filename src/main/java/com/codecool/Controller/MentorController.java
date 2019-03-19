@@ -49,6 +49,7 @@ public class MentorController {
                 isRunning = false;
                 break;
             default:
+                view.displayMessage("Enter correct option!");
                 break;
 
         }

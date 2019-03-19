@@ -3,7 +3,10 @@ package com.codecool.Dao;
 import com.codecool.Model.Employee;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MentorDaoImpl implements UserDao{
@@ -16,6 +19,25 @@ public class MentorDaoImpl implements UserDao{
     }
 
     public List<Employee> getAll() {
+        List<Employee> mentors = new ArrayList<>();
+        Statement stmt = null;
+        try {
+            connector.connectToDatabase();
+            connector.getConnection().setAutoCommit(false);
+            stmt = connector.getConnection().createStatement();
+            String sqlQuery = "SELECT Mentors.Id, FirstName, SecondName, Mail FROM Mentors";
+            ResultSet rs = stmt.executeQuery(sqlQuery);
+            while (rs.next()) {
+                Employee mentor = new Employee(rs.getInt("id"), rs.getString("firstName"),
+                        rs.getString("secondName"), rs.getString("mail"), "mentor");
+                mentors.add(mentor);
+            }
+            rs.close();
+            stmt.close();
+            connector.getConnection().close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return mentors;
     }
 

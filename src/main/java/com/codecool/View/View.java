@@ -64,6 +64,17 @@ public class View {
                     "\n (8) Exit");
     }
 
+    public void displayAdminMenu() {
+        displayMessage("\n Welcome Admin!" +
+                "\n What would you like to do:" +
+                "\n (1) List mentors" +
+                "\n (2) Add new mentor" +
+                "\n (3) Edit mentor's data" +
+                "\n (4) Remove mentor" +
+                "\n (5) List students" +
+                "\n (6) Exit");
+    }
+
     public void displayMainMenu() {
         displayMessage("Certification Candidate Management System:" +
                     "\n 1. Log in" +
