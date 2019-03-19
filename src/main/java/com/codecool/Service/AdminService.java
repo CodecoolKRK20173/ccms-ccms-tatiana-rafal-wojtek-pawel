@@ -32,4 +32,21 @@ public class AdminService {
         view.displayMentorsTable(mentors);
         view.getEmptyInput();
     }
+
+    public void addNewMentor() {
+        view.displayMessage("Enter new mentor's name:");
+        String name = view.getStringInput();
+        view.displayMessage("Enter new mentor's surname:");
+        String surname = view.getStringInput();
+        view.displayMessage("Enter new mentor's mail:");
+        String mail = view.getStringInput();
+        mentorDao.add(name, surname, mail, name, "qwerty");
+    }
+
+    public void removeMentor() {
+        displayAllMentors();
+        view.displayMessage("Enter mentor id you want to remove:");
+        int id = view.getIntegerInput();
+        mentorDao.delete(id);
+    }
 }

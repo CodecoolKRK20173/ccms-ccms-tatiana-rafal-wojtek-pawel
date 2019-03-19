@@ -31,10 +31,12 @@ public class AdminController {
                 adminService.displayAllMentors();
                 break;
             case 2: // add new mentor
+                adminService.addNewMentor();
                 break;
             case 3: // edit mentor's data
                 break;
             case 4: // remove mentor
+                adminService.removeMentor();
                 break;
             case 5: // list all students
                 adminService.displayAllStudents();

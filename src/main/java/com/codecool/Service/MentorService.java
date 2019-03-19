@@ -38,7 +38,7 @@ public class MentorService {
     public void removeStudent() {
         view.displayMessage("Enter student's ID you want to remove");
         int id = view.getIntegerInput();
-        mentorDao.delete(id);
+        studentDao.delete(id);
     }
 
     public void displayAllStudents() {

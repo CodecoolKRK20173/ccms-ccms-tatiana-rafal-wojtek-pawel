@@ -43,13 +43,13 @@ public class MentorDaoImpl implements UserDao{
 
     public void delete(int id) {
         connector.connectToDatabase();
-        PreparedStatement deleteStudent;
-        String deleteString = "DELETE FROM Students WHERE ID = ?";
+        PreparedStatement deleteMentor;
+        String deleteString = "DELETE FROM Mentors WHERE ID = ?";
         try {
-            deleteStudent = connector.getConnection().prepareStatement(deleteString);
-            deleteStudent.setInt(1, id);
-            deleteStudent.executeUpdate();
-            deleteStudent.close();
+            deleteMentor = connector.getConnection().prepareStatement(deleteString);
+            deleteMentor.setInt(1, id);
+            deleteMentor.executeUpdate();
+            deleteMentor.close();
             connector.getConnection().close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -57,10 +57,64 @@ public class MentorDaoImpl implements UserDao{
     }
 
     public void add(String name, String surname, String mail, String login, String password) {
+        createLogin(login, password);
+        int loginsId = getLastUsersLoginId();
+        String query = "INSERT INTO Mentors(firstname, secondname, mail, loginid) VALUES (?, ?, ?, ?)";
+        PreparedStatement statement = null;
+        try {
+            connector.connectToDatabase();
+            statement = connector.getConnection().prepareStatement(query);
+            statement.setString(1, name);
+            statement.setString(2, surname);
+            statement.setString(3, mail);
+            statement.setInt(4, loginsId);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void edit(int id) {
 
+    }
+
+    private void createLogin(String login, String password){
+        String query = "INSERT INTO LOGINS(LOGIN, PASSWORD, ACCESSRIGHTS) VALUES(?,?,'mentor')";
+        PreparedStatement statement = null;
+        try {
+            connector.connectToDatabase();
+            statement = connector.getConnection().prepareStatement(query);
+            statement.setString(1, login);
+            statement.setString(2, password);
+            statement.executeUpdate();
+            statement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+    }
+
+    private int getLastUsersLoginId(){
+        String productsQuery = "SELECT id FROM logins";
+        PreparedStatement statement = null;
+        ResultSet results = null;
+        try {
+            connector.connectToDatabase();
+            statement = connector.getConnection().prepareStatement(productsQuery);
+            results = statement.executeQuery();
+            int id = 0;
+            while (results.next()){
+                id = results.getInt("id");
+            }
+            statement.close();
+            connector.getConnection().close();
+            return id;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Integer.parseInt(null);
+        }
     }
 
 }
