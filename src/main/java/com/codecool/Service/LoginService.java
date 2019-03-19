@@ -52,7 +52,7 @@ public class LoginService {
                 studentController.handleStudentController();
             } else if (user.getAccessRights().equals(admin)) {
                 adminController = new AdminController();
-                //to do
+                adminController.handleAdminController();
             } else if (user.getAccessRights().equals(employee)) {
                 employeeController = new EmployeeController();
                 //to do

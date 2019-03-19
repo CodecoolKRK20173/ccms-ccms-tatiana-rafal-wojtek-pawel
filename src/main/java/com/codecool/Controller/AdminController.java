@@ -28,6 +28,7 @@ public class AdminController {
         view.clearScreen();
         switch (userInput) {
             case 1: // list all mentors
+                adminService.displayAllMentors();
                 break;
             case 2: // add new mentor
                 break;

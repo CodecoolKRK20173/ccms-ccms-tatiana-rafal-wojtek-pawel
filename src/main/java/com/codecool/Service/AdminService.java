@@ -29,5 +29,7 @@ public class AdminService {
 
     public void displayAllMentors() {
         List<Employee> mentors = mentorDao.getAll();
+        view.displayMentorsTable(mentors);
+        view.getEmptyInput();
     }
 }

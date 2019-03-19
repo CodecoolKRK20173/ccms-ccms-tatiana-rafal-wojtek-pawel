@@ -104,6 +104,16 @@ public class View {
         table.print();
     }
 
+    public void displayMentorsTable(List<Employee> mentors) {
+        TableView table = new TableView();
+        table.setShowVerticalLines(true);
+        table.setHeaders("ID", "Name", "Surname", "Email");
+        for (Employee mentor: mentors) {
+            table.addRow(String.valueOf(mentor.getID()), mentor.getName(), mentor.getSurname(), mentor.getEmail());
+        }
+        table.print();
+    }
+
     public String assignmentsToString(Student student) {
         StringBuilder sb = new StringBuilder();
         HashMap<Assignment, Integer> grades = student.getGrades();
