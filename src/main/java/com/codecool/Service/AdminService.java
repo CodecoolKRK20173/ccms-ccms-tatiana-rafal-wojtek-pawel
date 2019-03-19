@@ -49,4 +49,22 @@ public class AdminService {
         int id = view.getIntegerInput();
         mentorDao.delete(id);
     }
+
+    public void editMentor() {
+        displayAllMentors();
+        view.displayMessage("Enter mentor id you want to edit:");
+        int id = view.getIntegerInput();
+        view.displayMessage("Enter column name you want to edit:");
+        String columnName = view.getStringInput();
+        if (columnName.equals("Name")) {
+            columnName = "FirstName";
+        } else if (columnName.equals("Surname")) {
+            columnName = "SecondName";
+        }
+        view.displayMessage("Enter new value:");
+        String update = view.getStringInput();
+        mentorDao.edit(id, columnName, update);
+        view.displayMessage("Mentor updated successfully!");
+
+    }
 }

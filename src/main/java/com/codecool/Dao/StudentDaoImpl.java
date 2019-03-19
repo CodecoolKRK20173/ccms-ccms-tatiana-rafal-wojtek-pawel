@@ -158,7 +158,7 @@ public class StudentDaoImpl implements UserDao {
 
     
     @Override
-    public void edit(int id){
+    public void edit(int id, String columnName, String update){
 
     }
 

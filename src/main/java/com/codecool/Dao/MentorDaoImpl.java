@@ -74,8 +74,18 @@ public class MentorDaoImpl implements UserDao{
         }
     }
 
-    public void edit(int id) {
-
+    public void edit(int id, String columnName, String update) {
+        String updateString = "UPDATE Mentors SET " + columnName + " = ? WHERE ID = ?";
+        PreparedStatement statement = null;
+        try {
+            connector.connectToDatabase();
+            statement = connector.getConnection().prepareStatement(updateString);
+            statement.setString(1, update);
+            statement.setInt(2, id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private void createLogin(String login, String password){

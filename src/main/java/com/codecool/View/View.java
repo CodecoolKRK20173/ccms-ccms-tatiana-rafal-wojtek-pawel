@@ -29,6 +29,7 @@ public class View {
             scanner.nextLine();
         }
         int number = scanner.nextInt();
+        scanner.nextLine();
         return number;
     }
 
@@ -107,7 +108,7 @@ public class View {
     public void displayMentorsTable(List<Employee> mentors) {
         TableView table = new TableView();
         table.setShowVerticalLines(true);
-        table.setHeaders("ID", "Name", "Surname", "Email");
+        table.setHeaders("ID", "Name", "Surname", "Mail");
         for (Employee mentor: mentors) {
             table.addRow(String.valueOf(mentor.getID()), mentor.getName(), mentor.getSurname(), mentor.getEmail());
         }

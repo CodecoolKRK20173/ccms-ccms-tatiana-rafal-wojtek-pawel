@@ -34,6 +34,7 @@ public class AdminController {
                 adminService.addNewMentor();
                 break;
             case 3: // edit mentor's data
+                adminService.editMentor();
                 break;
             case 4: // remove mentor
                 adminService.removeMentor();
