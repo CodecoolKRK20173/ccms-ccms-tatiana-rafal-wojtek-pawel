@@ -55,7 +55,7 @@ public class LoginService {
                 adminController.handleAdminController();
             } else if (user.getAccessRights().equals(employee)) {
                 employeeController = new EmployeeController();
-                //to do
+                employeeController.handleEmployeeController();
             }
         }
         catch (SQLException e){

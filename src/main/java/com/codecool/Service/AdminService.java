@@ -1,6 +1,5 @@
 package com.codecool.Service;
 
-import com.codecool.Dao.CrudAssignmentsDaoImpl;
 import com.codecool.Dao.MentorDaoImpl;
 import com.codecool.Dao.StudentDaoImpl;
 import com.codecool.Model.Employee;
@@ -10,13 +9,11 @@ import java.util.List;
 
 public class AdminService {
     private View view;
-    private CrudAssignmentsDaoImpl assignmentsDao;
     private MentorDaoImpl mentorDao;
     private StudentDaoImpl studentDao;
 
     public AdminService() {
         this.view = new View();
-        this.assignmentsDao = new CrudAssignmentsDaoImpl();
         this.mentorDao = new MentorDaoImpl();
         this.studentDao = new StudentDaoImpl();
     }
@@ -54,7 +51,7 @@ public class AdminService {
         displayAllMentors();
         view.displayMessage("Enter mentor id you want to edit:");
         int id = view.getIntegerInput();
-        view.displayMessage("Enter column name you want to edit:");
+        view.displayMessage("Enter column name you want to edit (Name / Surname / Mail):");
         String columnName = view.getStringInput();
         if (columnName.equals("Name")) {
             columnName = "FirstName";

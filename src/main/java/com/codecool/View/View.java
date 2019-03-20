@@ -76,10 +76,17 @@ public class View {
                 "\n (6) Exit");
     }
 
+    public void displayEmployeeMenu() {
+        displayMessage("\n Welcome Employee!" +
+                "\n What would you like to do:" +
+                "\n (1) List students" +
+                "\n (2) Exit");
+    }
+
     public void displayMainMenu() {
-        displayMessage("Certification Candidate Management System:" +
-                    "\n 1. Log in" +
-                    "\n 2. Exit CcMS");
+        displayMessage("Codecool Management System:" +
+                    "\n (1) Log in" +
+                    "\n (2) Exit CcMS");
     }
 
     public void displayMessage(String message) {

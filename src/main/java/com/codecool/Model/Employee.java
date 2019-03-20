@@ -1,18 +1,18 @@
 package com.codecool.Model;
 
 public class Employee {
-    int id;
-    String name;
-    String surname;
-    String email;
-    String accessRights;
+    private int id;
+    private String name;
+    private String surname;
+    private String email;
+    private String accessRights;
     // String accessRights
     public Employee(int id, String name, String surname, String email, String accessRights) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
-        this.accessRights =accessRights;
+        this.accessRights = accessRights;
     }
 
     public int getID() {
