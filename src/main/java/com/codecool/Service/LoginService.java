@@ -36,9 +36,7 @@ public class LoginService {
 
             Employee employee = loginDao.getUserByLogin(view.getLogin(), view.getPassword());
             return employee;
-
     }
-
 
     public void chooseController() {
         try {
