@@ -4,6 +4,7 @@ com/codecool/Dao/UserDao.class
 com/codecool/Dao/AllAsignmentsDao.class
 com/codecool/Dao/MentorDaoImpl.class
 com/codecool/Controller/StudentController.class
+com/codecool/View/TableView.class
 com/codecool/Dao/GradeAssignmentsDao.class
 com/codecool/Dao/LoginDao.class
 com/codecool/Dao/StudentsAssingmentsDaoImpl.class

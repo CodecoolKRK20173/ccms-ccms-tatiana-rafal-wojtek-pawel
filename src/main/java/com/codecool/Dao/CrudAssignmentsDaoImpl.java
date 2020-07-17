@@ -14,7 +14,7 @@ public class CrudAssignmentsDaoImpl implements  CrudAssignmentsDao {
     @Override
     public void addAssignment(String title) {
         connector.connectToDatabase();
-        PreparedStatement assignment = null;
+        PreparedStatement assignment;
         String addString = "INSERT INTO Assignments (Title) VALUES (?)";
         try {
             assignment = connector.getConnection().prepareStatement(addString);
@@ -30,7 +30,7 @@ public class CrudAssignmentsDaoImpl implements  CrudAssignmentsDao {
     @Override
     public void deleteAssignment(int id) {
         connector.connectToDatabase();
-        PreparedStatement assignment = null;
+        PreparedStatement assignment;
         String deleteString = "DELETE FROM Assignments WHERE ID = ?";
         try {
             assignment = connector.getConnection().prepareStatement(deleteString);
